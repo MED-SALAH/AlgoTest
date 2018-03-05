@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="DJEDOUANI_Kheira">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="tab" taille="10" type="4"/>
+	<Var nom="N" taille="1" type="1"/><Var nom="j" taille="1" type="1"/>
+	</Dec><Body><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><Read range="i" value="tab"/><EndFor/>
+	</For><Affectation><exp left="N" name="exp1" op="=" rangLeft="" rangRight="" right="9"/>
+	</Affectation><For cond="j&gt;=1" pas="-1" valInitiale="N" var="j"><BeginFor><exp left="j" name="exp1" op="&gt;=" rangLeft="" rangRight="" right="1"/></BeginFor><If avecSion="1" cond="tab[N]==tab[N-1]+1"><BeginIf><exp left="tab" name="exp3" op="==" rangLeft="N" rangRight="" right="exp2"/><exp left="N" name="exp1" op="-" rangLeft="" rangRight="" right="1"/><exp left="tab" name="exp2" op="+" rangLeft="exp1" rangRight="" right="1"/></BeginIf><Write range="" value="Les elements du tableeau sont consecutifs"/><Else><Write range="" value="Les elements du tableeau ne sont pas consecutifs"/></Else><EndIf/></If><EndFor/></For></Body></Solution>

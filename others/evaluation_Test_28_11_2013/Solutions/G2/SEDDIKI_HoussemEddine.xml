@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Solution nom="SEDDIKI_HoussemEddine_6" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="t" type="4" taille="10"/>
+	<Var nom="com" type="1" taille="0"/>
+</Dec>
+<Body>	
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+	<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<Read value="t" range="i"/>
+	<EndFor/>
+	</For>
+	<Affectation><exp name = "exp1" left = "com" right = "0" op = "=" rangLeft="" rangRight=""/></Affectation>
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<If>
+		<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "1" op = "==" rangLeft="" rangRight=""/>
+				<exp name = "exp2" left = "t" right = "t" op = "-" rangLeft="exp3" rangRight="i"/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+		</BeginIf>
+			<Affectation>
+				<exp name = "exp1" left = "com" right = "exp2" op = "=" rangLeft="" rangRight=""/>
+				<exp name = "exp2" left = "com" right = "1" op = "+" rangLeft="" rangRight=""/>
+			</Affectation>
+		<EndIf/>
+		</If>
+		<EndFor/>
+	</For>
+	<If cond="com == 9" avecSion="1">
+		<BeginIf><exp name = "exp1" left = "com" right = "9" op = "==" rangLeft="" rangRight=""/></BeginIf>
+		<Write value="Les elements du tableau sont consecutifs" range=""/>
+		<Else>
+			<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+	<EndIf/>
+	</If>
+</Body>	
+</Solution>

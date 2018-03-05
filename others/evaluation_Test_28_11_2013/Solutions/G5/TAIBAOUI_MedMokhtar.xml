@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Solution evaluation="Eval1" exercice="Eval1" nom="TAIBAOUI_MedMokhtar">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="t" taille="10" type="4"/>
+	<Var nom="v" taille="1" type="6"/></Dec>
+	<Body>
+	<Affectation><exp left="v" name="exp1" op="=" rangLeft="" rangRight="" right="Faux"/>
+	</Affectation>
+	<Read range="0" value="t"/><For cond="i&lt;10" pas="1" valInitiale="1" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor>
+	<Read range="i" value="t"/><If avecSion="1" cond="t[i+1]&gt;=t[i]"><BeginIf><exp left="t" name="exp2" op="&gt;=" rangLeft="exp1" rangRight="i" right="t"/><exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/></BeginIf><Affectation><exp left="v" name="exp1" op="=" rangLeft="" rangRight="" right="Vrai"/></Affectation><Else><Affectation><exp left="v" name="exp1" op="=" rangLeft="" rangRight="" right="Faux"/></Affectation></Else><EndIf/></If><EndFor/></For><If avecSion="1" cond="v==Vrai"><BeginIf><exp left="v" name="exp1" op="==" rangLeft="" rangRight="" right="Vrai"/></BeginIf><Write range="" value="Les elements du tableau sont consecutifs"/><Else><Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If></Body></Solution>

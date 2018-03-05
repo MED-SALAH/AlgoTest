@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="KECHOUD_Imane_3">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="tab" taille="10" type="4"/></Dec>
+	<Body>
+	<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor>
+	<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor>
+		<Read range="i" value="tab"/>
+		<EndFor/>
+	</For>
+	
+	<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+		<BeginFor>
+		<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+		</BeginFor>
+		<If cond="tab[i]+1 == tab[i+1]" avecSion="1">
+			<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "tab" op = "==" rangLeft="" rangRight="exp3"/>
+				<exp name = "exp2" left = "tab" right = "1" op = "+" rangLeft="i" rangRight=""/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+			</BeginIf>
+				<Write value="les elements du tableau sont consecutifs" range=""/>
+		<Else>
+				<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+		<EndIf/>
+		</If>
+		<EndFor/>
+	</For>
+	
+	</Body>
+	</Solution>

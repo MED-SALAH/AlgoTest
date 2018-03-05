@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="RIGHI_Ines">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="T" taille="10" type="4"/></Dec><Body><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor>
+	<Read range="i" value="T"/><EndFor/></For>
+	<If avecSion="1" cond="T[i]&lt;T[i+1]">
+	<BeginIf>
+		<exp left="T" name="exp2" op="&lt;" rangLeft="i" rangRight="exp1" right="T"/>
+		<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+	</BeginIf>
+		<Write range="" value="Les elements du tableau sont consecutifs"/><Else><Write range="" value="Les elements du tableau sont consecutifs"/></Else><EndIf/></If></Body></Solution>

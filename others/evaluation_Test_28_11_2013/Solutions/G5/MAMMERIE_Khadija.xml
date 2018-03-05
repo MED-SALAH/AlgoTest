@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="MAMMERIE_Khadija">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="T" taille="10" type="4"/><Var nom="j" taille="1" type="1"/></Dec><Body><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor>
+	<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><Read range="i" value="T"/><EndFor/>
+	</For><For cond="j&lt;10" pas="1" valInitiale="i+1" var="j"><BeginFor><exp left="j" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><If avecSion="1" cond="T[j]&gt;T[i]ANDT[j+1]&gt;T[j]"><BeginIf><exp left="exp2" name="exp4" op="AND" rangLeft="" rangRight="" right="exp3"/><exp left="j" name="exp1" op="+" rangLeft="" rangRight="" right="1"/><exp left="T" name="exp2" op="&gt;" rangLeft="j" rangRight="i" right="T"/><exp left="T" name="exp3" op="&gt;" rangLeft="exp1" rangRight="j" right="T"/></BeginIf><Write range="" value="Les elements du tableau sont consecutifs"/><Else><Write range="" value="Les elements du tanleau ne sont pas consecutifs"/></Else><EndIf/></If><EndFor/></For></Body></Solution>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs" nom="modele 3">
+
+
+
+	
+<Dec><Var nom="i" taille="0" type="1"/><Var nom="t" taille="10" type="4"/></Dec><Body><For cond="i &lt; 10" pas="1" valInitiale="0" var="i">
+		
+		
+		
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><Read range="i" value="t"/><EndFor/></For><For cond="i &lt; 10" pas="1" valInitiale="0" var="i">
+		
+		
+		
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><If avecSion="1" cond="t[i] + 1 == t[i+1]">
+			
+			
+			
+			
+		<BeginIf>
+				<exp left="exp2" name="exp1" op="==" rangLeft="" rangRight="exp3" right="t"/>
+				<exp left="t" name="exp2" op="+" rangLeft="i" rangRight="" right="1"/>
+				<exp left="i" name="exp3" op="+" rangLeft="" rangRight="" right="1"/>
+			</BeginIf><If avecSion="0" cond="exp1">
+			
+				
+				
+			<BeginIf>
+				<exp left="i" name="exp1" op="==" rangLeft="" rangRight="" right="10"/>
+			</BeginIf><Write range="" value="Les elements du tableau sont consecutifs"/><EndIf/></If><Else>
+				
+			<Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If><EndFor/></For></Body>
+			<Tasks>
+			<Task Deb="5" Fin="8" Mere="" Name="Lecture" Note="1" Type="1"/>
+			<Task Deb="9" Fin="20" Mere="" Name="Test" Note="5" Type="1"/>
+			</Tasks>
+			<Constraints>
+			<Constraint NumLig="7" Penalite="" Src="" TaskName="Lecture" Trg="" Type="1"/>
+			<Constraint NumLig="9" Penalite="0" Src="" TaskName="Test" Trg="" Type="1"/>
+			<Constraint NumLig="11" Penalite="0" Src="" TaskName="Test" Trg="" Type="1"/>
+			<Constraint NumLig="9" Penalite="2" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="10" Penalite="0" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="20" Penalite="0" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="13" Penalite="2" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="14" Penalite="0" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="16" Penalite="0" Src="" TaskName="Test" Trg="" Type="3"/>
+			<Constraint NumLig="" Penalite="" Src="" TaskName="Lecture" Trg="" Type="6"/>
+			<Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="&lt;" rangLeft="i" rangRight="exp1" right="t"/>
+			<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/></Constraint>
+			<Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8"><exp left="exp2" name="exp3" op="==" rangLeft="" rangRight="i" right="t"/>
+			<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/><exp left="t" name="exp2" op="-" rangLeft="exp1" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="&gt;" rangLeft="exp1" rangRight="i" right="t"/><exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="==" rangLeft="i" rangRight="exp1" right="t"/><exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="==" rangLeft="exp1" rangRight="i" right="t"/><exp left="t" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp3" op="!=" rangLeft="i" rangRight="" right="exp2"/><exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+			<exp left="t" name="exp2" op="-" rangLeft="exp1" rangRight="" right="1"/></Constraint>
+			<Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8"><exp left="t" name="exp2" op="!=" rangLeft="i" rangRight="exp1" right="t"/>
+			<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/></Constraint>
+			<Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8"><exp left="t" name="exp1" op="==" rangLeft="i" rangRight="i" right="t"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="!=" rangLeft="i" rangRight="" right="exp1"/><exp left="t" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="t" name="exp2" op="!=" rangLeft="i" rangRight="" right="exp1"/><exp left="t" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="exp2" name="exp3" op="==" rangLeft="" rangRight="" right="0"/>
+			<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/><exp left="t" name="exp2" op="-" rangLeft="exp1" rangRight="i" right="t"/>
+			</Constraint><Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8">
+			<exp left="exp2" name="exp3" op="!=" rangLeft="" rangRight="exp1" right="t"/><exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+			<exp left="t" name="exp2" op="+" rangLeft="i" rangRight="" right="1"/></Constraint>
+			<Constraint NumLig="11" Penalite="" Src="" TaskName="" Trg="" Type="8"><exp left="exp2" name="exp1" op="!=" rangLeft="" rangRight="i" right="t"/>
+			<exp left="t" name="exp2" op="+" rangLeft="i" rangRight="" right="1"/></Constraint>
+			</Constraints>
+			</Solution>

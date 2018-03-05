@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="MESSINI_Meriem_6">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="T" taille="10" type="4"/></Dec><Body>
+	<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><Read range="i" value="T"/><EndFor/></For><For cond="i&lt;10" pas="1" valInitiale="0" var="i"><BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor>
+	<If avecSion="0" cond="T[i]==T[T[i+1]-1]">
+		<BeginIf><exp left="T" name="exp3" op="==" rangLeft="i" rangRight="exp2" right="T"/>
+		<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+		<exp left="T" name="exp2" op="-" rangLeft="exp1" rangRight="" right="1"/>
+		</BeginIf>
+			<Affectation>
+				<exp left="i" name="exp1" op="=" rangLeft="" rangRight="" right="exp2"/>
+				<exp left="i" name="exp2" op="+" rangLeft="" rangRight="" right="1"/>
+			</Affectation>
+			<Else>
+			<Affectation>
+				<exp left="i" name="exp1" op="=" rangLeft="" rangRight="" right="11"/>
+			</Affectation>
+			</Else>
+			<EndIf/></If><EndFor/></For><If avecSion="1" cond="i==10"><BeginIf><exp left="i" name="exp1" op="==" rangLeft="" rangRight="" right="10"/></BeginIf><Write range="" value="Les elements du tableau sont consecutifs"/><Else><Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If></Body></Solution>

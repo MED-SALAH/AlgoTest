@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Solution evaluation="Eval1" exercice="Eval1" nom="MANAA_Ouissam">
+	
+	
+	
+	
+	<Dec>
+		<Var nom="m" taille="1" type="1"/>
+		<Var nom="b" taille="" type="6"/>
+		<Var nom="k" taille="1" type="1"/>
+		<Var nom="t" taille="10" type="4"/>
+	</Dec>
+	<Body>
+		<For cond="m&lt;10" pas="1" valInitiale="0" var="m">
+		<BeginFor><exp left="m" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+		</BeginFor>
+			<Read range="m" value="t"/>
+			<EndFor/>
+		</For>
+		<Affectation><exp left="k" name="exp1" op="=" rangLeft="" rangRight="" right="0"/>
+		</Affectation>
+		<Affectation><exp left="b" name="exp1" op="=" rangLeft="" rangRight="" right="Vrai"/>
+		</Affectation>
+		<While cond="k&lt;9ANDb==Vrai">
+		<BeginWhile>
+		<exp left="exp2" name="exp3" op="AND" rangLeft="" rangRight="" right="exp1"/>
+		<exp left="b" name="exp1" op="==" rangLeft="" rangRight="" right="Vrai"/>
+		<exp left="k" name="exp2" op="&lt;" rangLeft="" rangRight="" right="9"/>
+		</BeginWhile>
+		<If avecSion="0" cond="t[k]+1!=t[k+1]">
+		<BeginIf><exp left="exp2" name="exp3" op="!=" rangLeft="" rangRight="exp1" right="t"/>
+			<exp left="k" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+			<exp left="t" name="exp2" op="+" rangLeft="k" rangRight="" right="1"/>
+		</BeginIf>
+			<Affectation><exp left="b" name="exp1" op="=" rangLeft="" rangRight="" right="Faux"/>
+			</Affectation>
+			<EndIf/>
+		</If>
+		<EndWhile/>
+		</While>
+		<If avecSion="1" cond="b==Vrai">
+		<BeginIf><exp left="b" name="exp1" op="==" rangLeft="" rangRight="" right="Vrai"/></BeginIf>
+			<Write range="" value="Les elements du tableai sont consecutis"/>
+		<Else>
+			<Write range="" value="Les elements du tableai sont consecutis"/>
+		</Else>
+		<EndIf/>
+		</If></Body></Solution>

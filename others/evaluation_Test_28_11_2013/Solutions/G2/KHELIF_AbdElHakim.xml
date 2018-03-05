@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Solution nom="KHELIF_AbdElHakim_4" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="t" type="4" taille="10"/>
+</Dec>
+<Body>	
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<Read value="t" range="i"/>
+		<EndFor/>
+	</For>
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<If cond="t[i]+1 == t[i+1]" avecSion="1">
+			<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "t" op = "==" rangLeft="" rangRight="exp3"/>
+				<exp name = "exp2" left = "t" right = "1" op = "+" rangLeft="i" rangRight=""/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+			</BeginIf>
+				<Write value="les elements du tableau sont consecutifs" range=""/>
+		<Else>
+				<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+		<EndIf/>
+		</If>
+		<EndFor/>
+	</For>
+</Body>
+</Solution>

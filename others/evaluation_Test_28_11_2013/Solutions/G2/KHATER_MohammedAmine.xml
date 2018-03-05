@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Solution nom="KHATER_MohammedAmine_4" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="x" type="1" taille="0"/>
+	<Var nom="tab" type="4" taille="10"/>
+</Dec>
+<Body>	
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<Read value="tab" range="i"/>
+		<EndFor/>
+	</For>
+	<Affectation>
+		<exp name = "exp1" left = "x" right = "exp2" op = "=" rangLeft="" rangRight=""/>
+		<exp name = "exp2" left = "tab" right = "tab" op = "-" rangLeft="1" rangRight="0"/>
+	</Affectation>
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+		<If cond="tab[i+1]-tab[i] == x" avecSion="1">
+			<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "x" op = "==" rangLeft="" rangRight=""/>
+				<exp name = "exp2" left = "tab" right = "tab" op = "-" rangLeft="exp3" rangRight="i"/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+			</BeginIf>
+				<Write value="les elements du tableau sont consecutifs" range=""/>
+		<Else>
+				<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+		<EndIf/>
+		</If>
+		<EndFor/>
+	</For>
+</Body>
+</Solution>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Solution nom="modele 7" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="t" type="4" taille="10"/>
+	<Var nom="Consec" type="6" taille="0"/>
+</Dec>
+<Body>	
+	<For var="i" valInitiale="0" cond="i &lt; 10" pas="1">
+		<BeginFor><exp name = "exp1" left = "i" right = "10" op = "&lt;" rangLeft="" rangRight=""/></BeginFor>
+			<Read value="t" range="i"/>
+		<EndFor/>
+	</For>
+	<Affectation><exp name = "exp1" left = "i" right = "0" op = "=" rangLeft="" rangRight=""/></Affectation>
+	<Affectation><exp name = "exp1" left = "Consec" right = "Vrai" op = "=" rangLeft="" rangRight=""/></Affectation>
+	<While cond="i &lt; 9 &amp;&amp; Consec == vrai">
+		<BeginWhile>
+			<exp name = "exp1" left = "exp2" right = "exp3" op = "AND" rang=""/>
+			<exp name = "exp2" left = "i" right = "9" op = "&lt;" rang=""/>
+			<exp name = "exp3" left = "Consec" right = "Vrai" op = "==" rang=""/>
+		</BeginWhile>
+		<If cond="t[i] + 1 != t[i+1]" avecSion="1">
+		<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "t" op = "!=" rangLeft="" rangRight="exp3"/>
+				<exp name = "exp2" left = "t" right = "1" op = "+" rangLeft="i" rangRight=""/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+		</BeginIf>
+				<Affectation><exp name = "exp1" left = "Consec" right = "Faux" op = "=" rangLeft="" rangRight=""/></Affectation>
+		<EndIf/>
+		</If>
+		<EndWhile/>
+	</While>
+	<If cond="Consec == Vrai" avecSion="1">
+		<BeginIf><exp name = "exp1" left = "Consec" right = "Vrai" op = "==" rangLeft="" rangRight=""/></BeginIf>
+		<Write value="Les elements du tableau sont consecutifs" range=""/>
+		<Else>
+			<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+		<EndIf/>
+	</If>
+</Body>
+<Tasks>	
+	<Task Name = "Lecture" Type = "1" Mere = "" Note = "1" Deb = "6" Fin = "9"/>
+	<Task Name = "Initialisation" Type = "1" Mere = "" Note = "1" Deb = "10" Fin = "11"/>
+	<Task Name = "Test" Type = "1" Mere = "" Note = "2" Deb = "12" Fin = "18"/>
+	<Task Name = "Resultat" Type = "1" Mere = "" Note = "2" Deb = "19" Fin = "24"/>
+</Tasks>
+<Constraints>	
+	<Constraint Type = "1" NumLig = "8" TaskName = "Lecture" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "10" TaskName = "Initialisation" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "12" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "14" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "16" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "19" TaskName = "Resultat" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "4" NumLig = "" TaskName = "" Penalite = "" Src = "Lecture" Trg = "Initialisation" />
+</Constraints>	
+</Solution>

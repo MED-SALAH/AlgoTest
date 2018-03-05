@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="BENHAMED_SifEddine">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="Tab" taille="10" type="4"/></Dec><Body><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><Read range="i" value="Tab"/><EndFor/></For><For cond="i&lt;9" pas="1" valInitiale="0" var="i">
+	
+	<BeginFor><exp left="i" name="exp2" op="&lt;" rangLeft="" rangRight="" right="9"/>
+	<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><If avecSion="1" cond="Tab[i+1]-Tab[i]!=1">
+	
+	<BeginIf><exp left="exp2" name="exp3" op="!=" rangLeft="" rangRight="" right="1"/>
+	<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+	<exp left="Tab" name="exp2" op="-" rangLeft="exp1" rangRight="i" right="Tab"/>
+	</BeginIf><Write range="" value="Les elements du tableaux ne sont pas consecutifs"/><Affectation>
+	<exp left="i" name="exp1" op="=" rangLeft="" rangRight="" right="11"/>
+	</Affectation><Else><If avecSion="0" cond="i==8">
+	
+	<BeginIf><exp left="i" name="exp1" op="==" rangLeft="" rangRight="" right="8"/>
+	</BeginIf><Write range="" value="Les element du tableau sont consecutifs"/><EndIf/></If></Else><EndIf/></If><EndFor/></For></Body></Solution>

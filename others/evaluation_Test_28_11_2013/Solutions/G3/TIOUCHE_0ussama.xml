@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="TIOUCHE_0ussama">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="j" taille="1" type="1"/>
+	<Var nom="q" taille="1" type="6"/><Var nom="T" taille="10" type="4"/>
+	<Var nom="k" taille="1" type="1"/>
+	</Dec>
+	<Body>
+	<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor>
+		<Read range="i" value="T"/>
+		<EndFor/>
+	</For>
+	<For cond="i&lt;9" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="9"/>
+	</BeginFor>
+		<Affectation><exp left="j" name="exp2" op="=" rangLeft="" rangRight="" right="exp1"/>
+		<exp left="i" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+		</Affectation>
+		<Affectation><exp left="q" name="exp3" op="=" rangLeft="" rangRight="" right="exp2"/>
+		<exp left="T" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+		<exp left="j" name="exp2" op="==" rangLeft="" rangRight="" right="exp1"/>
+		</Affectation>
+		<If avecSion="1" cond="q==0">
+		<BeginIf><exp left="q" name="exp1" op="==" rangLeft="" rangRight="" right="false"/>
+		</BeginIf>
+			<Write range="" value="Les elements du tableau sont consecutifs"/>
+	<Else>
+			<Affectation><exp left="k" name="exp1" op="=" rangLeft="" rangRight="" right="i"/>
+			</Affectation>
+	</Else>
+		<EndIf/>
+	</If>
+	<EndFor/>
+	</For>
+	<If avecSion="0" cond="k==i"><BeginIf><exp left="k" name="exp1" op="==" rangLeft="" rangRight="" right="i"/></BeginIf><Write range="" value="Les elements du tableau ne sont pas consecutifs"/><EndIf/></If></Body></Solution>

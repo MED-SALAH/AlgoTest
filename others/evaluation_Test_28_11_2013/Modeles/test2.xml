@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Solution nom="AMOUCHE_Manel_2" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="j" type="1" taille="0"/>
+	
+</Dec>
+<Body>	
+	
+	<Write value="entrer une valeur de i :" range=""/>
+	
+	<Read range="" value="i"/>
+	
+	<Write value="entrer une valeur de j :" range=""/>
+	
+	<Read range="" value="j"/>
+	
+	<Write value="la valeur de i est :" range=""/>
+	
+	<Write value="la valeur de j est :" range=""/>
+	
+</Body>	
+</Solution>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="modele11">
+	
+		
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="tab" taille="10" type="4"/><Var nom="j" taille="1" type="1"/></Dec>
+	<Body>
+	<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor>
+	<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor>
+		<Read range="i" value="tab"/>
+		<EndFor/>
+	</For>
+	<For cond="i&lt;9" pas="1" valInitiale="0" var="i">
+		<BeginFor>
+		<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="9"/>
+		</BeginFor>
+		<For cond="i&lt;10" pas="1" valInitiale="i+1" var="j">
+		<BeginFor>
+		<exp left="j" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+		</BeginFor>
+		<If cond="tab[i]+1 == tab[j]" avecSion="1">
+			<BeginIf>
+				<exp left="tab" name="exp2" op="==" rangLeft="exp1" rangRight="" right="j"/>
+				<exp left="tab" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+
+			</BeginIf>
+				<Write value="les elements du tableau sont consecutifs" range=""/>
+		<Else>
+				<Write value="Les elements du tableau ne sont pas consecutifs" range=""/>
+		</Else>
+		<EndIf/>
+		</If>
+		<EndFor/>
+		</For>
+		<EndFor/>
+	</For>
+	
+	
+	</Body>
+	
+	
+	
+	
+	<Tasks>	
+	<Task Name = "Lecture" Type = "1" Mere = "" Note = "1" Deb = "6" Fin = "9"/>
+	<Task Name = "Test" Type = "1" Mere = "" Note = "1" Deb = "10" Fin = "21"/>
+</Tasks>
+<Constraints>	
+	<Constraint Type = "1" NumLig = "8" TaskName = "Lecture" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "10" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "12" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+	<Constraint Type = "1" NumLig = "14" TaskName = "Test" Penalite = "" Src = "" Trg = "" />
+</Constraints>	
+	</Solution>

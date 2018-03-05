@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="BAALOUL_Khawla">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="tab" taille="10" type="4"/><Var nom="j" taille="1" type="1"/></Dec><Body><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor>
+	<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><Read range="i" value="tab"/><For cond="j&lt;10" pas="1" valInitiale="i" var="j">
+	<BeginFor><exp left="j" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+	</BeginFor><If avecSion="1" cond="tab[j]+1==tab[j]">
+	<BeginIf><exp left="exp2" name="exp3" op="==" rangLeft="" rangRight="j" right="tab"/>
+	<exp left="j" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+	<exp left="tab" name="exp2" op="+" rangLeft="j" rangRight="" right="1"/>
+	</BeginIf>
+	<Affectation>
+	<exp left="j" name="exp2" op="=" rangLeft="" rangRight="" right="exp1"/>
+	<exp left="j" name="exp1" op="+" rangLeft="" rangRight="" right="1"/>
+	</Affectation><Else><Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If><EndFor/></For><EndFor/></For></Body></Solution>

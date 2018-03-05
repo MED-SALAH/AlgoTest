@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="AZARA_Abir_5">
+	
+	
+	
+	<Dec><Var nom="i" taille="1" type="1"/><Var nom="a" taille="1" type="6"/>
+	<Var nom="Tab" taille="10" type="4"/><Var nom="j" taille="1" type="1"/></Dec>
+	<Body><Affectation><exp left="j" name="exp1" op="=" rangLeft="" rangRight="" right="0"/>
+	</Affectation><For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor>
+	<Read range="i" value="Tab"/><EndFor/></For>
+	<While cond="j&lt;9ANDa==Vrai">
+	<BeginWhile>
+	<exp left="exp2" name="exp1" op="AND" rangLeft="" rangRight="" right="exp3"/>
+	<exp left="j" name="exp2" op="&lt;" rangLeft="" rangRight="" right="9"/>
+	<exp left="a" name="exp3" op="==" rangLeft="" rangRight="" right="Vrai"/>
+	</BeginWhile>
+	
+	<Affectation><exp left="a" name="exp1" op="=" rangLeft="" rangRight="" right="Faux"/></Affectation><If avecSion="0" cond="Tab[j]+1==Tab[j+1]"><BeginIf><exp left="exp2" name="exp3" op="==" rangLeft="" rangRight="exp1" right="Tab"/><exp left="j" name="exp1" op="+" rangLeft="" rangRight="" right="1"/><exp left="Tab" name="exp2" op="+" rangLeft="j" rangRight="" right="1"/></BeginIf><Affectation><exp left="a" name="exp1" op="=" rangLeft="" rangRight="" right="Vrai"/></Affectation><EndIf/></If><Affectation><exp left="j" name="exp2" op="=" rangLeft="" rangRight="" right="exp1"/><exp left="j" name="exp1" op="+" rangLeft="" rangRight="" right="1"/></Affectation><EndWhile/></While><If avecSion="1" cond="a==Vrai"><BeginIf><exp left="a" name="exp1" op="==" rangLeft="" rangRight="" right="Vrai"/></BeginIf><Write range="" value="Less elements du tableau sont consecutifs"/><Else><Write range="" value="Less elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If></Body></Solution>

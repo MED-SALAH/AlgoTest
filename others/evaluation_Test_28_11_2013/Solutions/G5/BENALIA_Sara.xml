@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs" nom="BENALIA_Sara">
+
+
+<Dec><Var nom="i" taille="0" type="1"/><Var nom="tab" taille="10" type="4"/></Dec><Body><Write range="" value="les elements du tableau"/><For cond="i &lt; 10" pas="1" valInitiale="0" var="i">
+		
+		
+		
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><Read range="i" value="tab"/><EndFor/></For><For cond="i &lt; 10" pas="1" valInitiale="0" var="i">
+		
+		
+		
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><If avecSion="1" cond="tab[i]+1 == tab[i]">
+			
+				
+		
+		
+		<BeginIf>
+				<exp left="exp2" name="exp1" op="==" rangLeft="" rangRight="exp3" right="tab"/>
+				<exp left="tab" name="exp2" op="+" rangLeft="i" rangRight="" right="1"/>
+				<exp left="i" name="exp3" op="+" rangLeft="" rangRight="" right="1"/>
+			</BeginIf><Write range="" value="les elements du tableau sont consecutifs"/><Else>
+				
+		<Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If><EndFor/></For></Body></Solution>

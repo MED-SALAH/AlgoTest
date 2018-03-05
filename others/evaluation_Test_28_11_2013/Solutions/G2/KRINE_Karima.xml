@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs" nom="KRINE_Karima_6">
+
+
+<Dec><Var nom="i" taille="0" type="1"/><Var nom="temp" taille="1" type="1"/><Var nom="tab" taille="10" type="4"/></Dec><Body><Read range="0" value="tab"/><For cond="i &lt; 10" pas="1" valInitiale="1" var="i">
+		
+		
+		
+		
+	<BeginFor><exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/></BeginFor><Read range="i" value="tab"/><If avecSion="1" cond="tab[i-1]+1 != tab[i]">
+			
+				
+		
+		<BeginIf>
+				<exp left="exp2" name="exp1" op="!=" rangLeft="exp2" rangRight="i" right="tab"/>
+				<exp left="tab" name="exp2" op="+" rangLeft="exp3" rangRight="" right="1"/>
+				<exp left="i" name="exp3" op="-" rangLeft="" rangRight="" right="1"/>
+			</BeginIf><Affectation>
+				<exp left="temp" name="exp1" op="=" rangLeft="" rangRight="" right="0"/>
+			</Affectation><EndIf/><EndFor/></If></For><If avecSion="1" cond="temp = 0">
+			
+				
+		
+		
+		<BeginIf>
+				<exp left="temp" name="exp1" op="==" rangLeft="" rangRight="" right="0"/>
+			</BeginIf><Write range="" value="les elements du tableau sont consecutifs"/><Else>
+				
+		<Write range="" value="Les elements du tableau ne sont pas consecutifs"/></Else><EndIf/></If></Body></Solution>

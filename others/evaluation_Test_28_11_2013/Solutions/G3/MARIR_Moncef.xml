@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Solution evaluation="Eval1" exercice="Eval1" nom="MARIR_Moncef_1">
+	
+	
+	
+	<Dec>
+	<Var nom="N" taille="1" type="1"/>
+	<Var nom="t" taille="10" type="4"/>
+	<Var nom="i" taille="1" type="1"/>
+	</Dec>
+	<Body>
+		<For cond="i&lt;10" pas="1" valInitiale="0" var="i">
+		<BeginFor>
+		<exp left="i" name="exp1" op="&lt;" rangLeft="" rangRight="" right="10"/>
+		</BeginFor>
+		<If avecSion="1" cond="t[i]!=t[i]+1">
+		<BeginIf>
+			<exp left="t" name="exp2" op="!=" rangLeft="i" rangRight="" right="exp1"/>
+			<exp left="t" name="exp1" op="+" rangLeft="i" rangRight="" right="1"/>
+		</BeginIf>
+		<Write range="" value="Les elements du tableau ne sont pas consecutifs"/>
+		<Else>
+			<Write range="" value="Les elements du tableau sont consecutifs"/>
+		</Else>
+		<EndIf/>
+		</If>
+	<EndFor/>
+	</For></Body></Solution>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Solution nom="AMOUCHE_Manel_2" evaluation="Evaluation_CC_01_1213" exercice="Exo4_Consecutifs">
+<Dec>
+	<Var nom="Consec" type="6" taille="0"/>
+	<Var nom="i" type="1" taille="0"/>
+	<Var nom="j" type="1" taille="0"/>
+	<Var nom="t" type="4" taille="10"/>
+</Dec>
+<Body>	
+	
+	<Write value="entrer une valeur de i :" range=""/>
+	
+	<Read range="" value="i"/>
+	
+	<Write value="la valeur lu de i est :" range=""/>
+	
+	<Write value="entrer une valeur de j :" range=""/>
+	
+	<Read range="" value="j"/>
+	
+	<Write value="la valeur lu de j est :" range=""/>
+	
+	
+	
+	<If cond="i != j " avecSion="0">
+			<BeginIf>
+				<exp name = "exp1" left = "exp2" right = "t" op = "!=" rangLeft="" rangRight="exp3"/>
+				<exp name = "exp2" left = "t" right = "1" op = "+" rangLeft="i" rangRight=""/>
+				<exp name = "exp3" left = "i" right = "1" op = "+" rangLeft="" rangRight=""/>
+			</BeginIf>
+			<Affectation><exp name = "exp1" left = "Consec" right = "Faux" op = "=" rangLeft="" rangRight=""/></Affectation>
+			<Affectation><exp name = "exp1" left = "i" right = "11" op = "=" rangLeft="" rangRight=""/></Affectation>
+			<EndIf/>
+		</If>
+		
+</Body>	
+</Solution>
